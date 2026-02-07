@@ -37,6 +37,22 @@
             width: 32px;
             height: 32px;
             color: #e04030;
+            filter: drop-shadow(0 0 12px rgba(224, 64, 48, 0.4));
+            animation: ring 4s ease-in-out infinite;
+        }
+
+        @keyframes ring {
+            0%, 100% {
+                transform: rotate(0deg);
+                filter: drop-shadow(0 0 12px rgba(224, 64, 48, 0.4));
+            }
+            15% { transform: rotate(10deg); }
+            20% { transform: rotate(-8deg); }
+            25% { transform: rotate(5deg); }
+            30% { transform: rotate(0deg); }
+            50% {
+                filter: drop-shadow(0 0 20px rgba(224, 64, 48, 0.7));
+            }
         }
 
         .logo h1 {
